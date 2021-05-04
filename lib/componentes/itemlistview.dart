@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:delivery/model/produto_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +38,7 @@ class _CustomListItemState extends State<CustomListItem> {
             children: <Widget>[
               Container(
                 height: 100.0,
-                width: 130.0,
+                width: 110.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(5),
@@ -52,9 +50,9 @@ class _CustomListItemState extends State<CustomListItem> {
                             'http://177.86.175.200:3040/BorjaoService/entitiesopen/produtofotos')))),
               ),
               Container(
-                height: 80,
+                height: 70,
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(10, 2, 0, 0),
+                  padding: EdgeInsets.fromLTRB(20, 2, 5, 5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -63,13 +61,13 @@ class _CustomListItemState extends State<CustomListItem> {
                         //  {TextStyle(fontSize: 14)},
                       ),
                       Padding(
-                        padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
+                        padding: EdgeInsets.fromLTRB(6, 3, 0, 3),
                         child: Container(
                           width: 60,
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.teal),
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(15))),
+                                  BorderRadius.all(Radius.circular(5))),
                           child: Text(
                             widget.produto.iDCODIGO.toString(),
                             textAlign: TextAlign.center,

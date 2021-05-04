@@ -9,7 +9,7 @@ class ProdutoRepository {
       'http://177.86.175.200:3040/BorjaoService/entities/produtoprom';
   final repository = TokenRepository();
   final url =
-      'http://177.86.175.200:3040/BorjaoService/entities/produtoprom?\$top=10000';
+      'http://177.86.175.200:3040/BorjaoService/entities/produtoprom?\$top=100';
 
   ProdutoRepository([Dio client]) : this.dio = client ?? Dio();
 

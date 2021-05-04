@@ -11,6 +11,9 @@ class ProdutoProm {
   String fOTO64;
   String fOTO1XdataProxy;
   String uND;
+  int cODMARCA;
+  int cODGRU;
+  int cODSUBGRU;
 
   ProdutoProm(
       {this.id,
@@ -24,7 +27,10 @@ class ProdutoProm {
       this.fOTOURL,
       this.fOTO64,
       this.fOTO1XdataProxy,
-      this.uND});
+      this.uND,
+      this.cODMARCA,
+      this.cODGRU,
+      this.cODSUBGRU});
 
   ProdutoProm.fromJson(Map<String, dynamic> json) {
     id = json['$id'];
@@ -34,11 +40,17 @@ class ProdutoProm {
     cODIGOGTIN = json['CODIGOGTIN_'];
     nOMPRO = json['NOMPRO_'];
     vALOR = json['VALOR_'];
+    if (vALOR.isNaN) {
+      vALOR = 0;
+    }
     vALORREF = json['VALOR_REF_'];
     fOTOURL = json['FOTO_URL'];
     fOTO64 = json['FOTO64'];
     fOTO1XdataProxy = json['FOTO1@xdata.proxy'];
     uND = json['UND_'];
+    cODMARCA = json['CODMARCA_'];
+    cODGRU = json['CODGRU_'];
+    cODSUBGRU = json['CODSUBGRU_'];
   }
 
   Map<String, dynamic> toJson() {
@@ -55,6 +67,9 @@ class ProdutoProm {
     data['FOTO64'] = this.fOTO64;
     data['FOTO1@xdata.proxy'] = this.fOTO1XdataProxy;
     data['UND_'] = this.uND;
+    data['CODMARCA_'] = this.cODMARCA;
+    data['CODGRU_'] = this.cODGRU;
+    data['CODSUBGRU_'] = this.cODSUBGRU;
     return data;
   }
 }

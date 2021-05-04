@@ -38,7 +38,7 @@ class _HomeViewState extends State<HomeView> {
 
   _error() {
     return Center(
-      child: RaisedButton(
+      child: ElevatedButton(
         child: Text('Tentar novamente'),
         onPressed: () {
           controller.getProdutos();
